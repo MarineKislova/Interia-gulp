@@ -1,0 +1,85 @@
+//утилиты
+@use "utils/_reset.scss" as *;
+@use "fonts" as fs;
+@use "utils/_mixins" as mSt;
+@use "utils/_settings.scss" as setSt;
+@use "utils/_variable.scss" as varSt;
+
+// блоки
+@use "blocks/_header.scss";
+@use "blocks/_about.scss";
+@use "blocks/_section2.scss";
+@use "blocks/_section3.scss";
+@use "blocks/_footer.scss";
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(25, 29, 29);
+}
+.content {
+  flex: 1 1 auto;
+}
+
+[class*="__container"] {
+  max-width: 1140px;
+  margin: 0 auto;
+  // background-color: rgb(25, 29, 29);
+  
+}
+
+[class*="__link"] {
+  font-family: "Nunito";
+  font-weight: 400;
+  @include mSt.adaptiv-value("font-size", 16, 0, 0);
+  @include mSt.adaptiv-value("line-height", 22, 0, 0);
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+[class*="btn"]{
+  border: 1px solid #6d7d7d;
+  border-radius: 100px;
+  font-weight: 400;
+  @include mSt.adaptiv-value("font-size", 16, 10, 0);
+  @include mSt.adaptiv-value("line-height", 24, 15, 0);
+  text-align: center;
+  letter-spacing: 6.88px;
+}
+
+h2 {
+  font-family: "Kanit";
+  font-weight: 400;
+  @include mSt.adaptiv-value("font-size", 40, 24, 0);
+  @include mSt.adaptiv-value("line-height", 60, 30, 0);
+}
+
+h3 {
+  font-family: "Kanit";
+  font-weight: 400;
+  @include mSt.adaptiv-value("font-size", 16, 0, 0);
+  @include mSt.adaptiv-value("line-height", 24, 22, 0);
+  font-size: 16px;
+  color: #6d7d7d;
+}
+
+p {
+  font-family: "Nunito";
+  font-weight: 400;
+  @include mSt.adaptiv-value("font-size", 16, 0, 0);
+  @include mSt.adaptiv-value("line-height", 22, 20, 0);
+  font-size: 16px;
+}
+
+a {
+  font-family: "Kanit";
+  font-weight: 400;
+  @include mSt.adaptiv-value("font-size", 16, 0, 0);
+  @include mSt.adaptiv-value("line-height", 24, 0, 0);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.43em;
+}

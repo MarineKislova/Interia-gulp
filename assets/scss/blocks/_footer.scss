@@ -1,0 +1,110 @@
+@use "../utils/mixins" as mf;
+
+.footer {
+  background-color: rgb(19, 22, 22);
+  &__container {
+    display: flex;
+    flex-direction: column;
+    @include mf.adaptiv-value("padding-top", 127, 36, 0);
+
+    @media (max-width: 1150px) {
+      padding: 20px;
+    }
+  }
+
+  &__rowOne {
+    display: flex;
+    justify-content: space-between;
+    background-color: #131616;
+    @include mf.adaptiv-value("padding-bottom", 67, 6, 0);
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+
+  &__nav {
+    width: 541px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  }
+
+  &__link {
+    font-family: "Nunito";
+  }
+
+  &__logo {
+    width: 99px;
+    height: 24px;
+  }
+
+  &__rowTwo {
+    display: flex;
+    @include mf.adaptiv-value("padding-top", 97, 16, 0);
+    @include mf.adaptiv-value("padding-bottom", 158, 36, 0);
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      gap: 20px;
+      align-items: center;
+    }
+  }
+
+  &__social {
+    display: flex;
+    @include mf.adaptiv-value("gap", 30, 5, 0);
+    justify-content: space-between;
+  }
+
+  &__about {
+    display: flex;
+    max-width: 316px;
+    text-align: right;
+
+    @media (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  &__rowThree {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mf.adaptiv-value("padding-top", 52, 6, 0);
+    @include mf.adaptiv-value("padding-bottom", 49, 36, 0);
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+      gap: 10px;
+      align-items: center;
+    }
+  }
+
+  &__copyright {
+    @include mf.adaptiv-value("width", 383, 280, 0);
+    height: 22px;
+    font-family: "Nunito";
+    font-weight: 400;
+    @include mf.adaptiv-value("font-size", 16, 0, 0);
+    @include mf.adaptiv-value("line-height", 22, 0, 0);
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  &__secure {
+    display: inline-flex;
+    @include mf.adaptiv-value("gap", 97, 27, 0);
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+  @@include('html/head.html', { "title": "Interia" })
+  <body>
+    <div class="wrapper">
+      <main class="content">
+        @@include('html/header.html', {})
+        <!-- section  about -->
+        <section class="about">
+          <div class="about__container">
+            <div class="about__body">
+              <h3>ABOUT</h3>
+              <h2>We are the best interior design studio in london</h2>
+              <p>
+                Posuere urna nec tincidunt praesent. Egestas maecenas pharetra convallis posuere. Ipsum nunc aliquet
+                bibendum enim. Sem integer vitae justo eget magna fermentum iaculis eu non.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- section 2 -->
+        <section class="section-two">
+          <div class="section-two__container">
+            <div class="section-two__column about-left">
+              <div><img src="img/IMG1.png" alt="living room interior" /></div>
+              <div><img src="img/IMG2.png" alt="bedside space interior" /></div>
+            </div>
+            <div class="section-two__column about-right">
+              <div class="section-two__row-one">
+                <div><img src="img/IMG3.png" alt="workplace interior" /></div>
+                <a class="section-two__row-one-link btn" href="#">LEARN ABOUT</a>
+              </div>
+              <div class="section-two__row-two">
+                <p>
+                  <span>2K+</span> <br />
+                  PROJECTS <br />
+                  DONE
+                </p>
+                <p>
+                  <span>20+</span> <br />
+                  PRO <br />
+                  TEAMS
+                </p>
+                <p>
+                  <span>300+</span> <br />
+                  GLOBAL <br />
+                  CLIENTS
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- section 3 -->
+        <div class="section-three">
+          <div class="section-three__container">
+            <h2>
+              Blending creativity and <br />
+              functionality in every design
+            </h2>
+            <a href="#" class="btn">HIRE US NOW</a>
+          </div>
+        </div>
+        @@include('html/footer.html', {})
+      </main>
+    </div>
+
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
