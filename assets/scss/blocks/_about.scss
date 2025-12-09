@@ -10,7 +10,7 @@
   &__body {
     display: flex;
     flex-direction: column;
-    @include ma.adaptiv-value("padding-top", 100, 35, 0);
+    @include ma.adaptiv-value("padding-top", 100, 15, 0);
     justify-content: space-between;
 
     p {
@@ -20,9 +20,7 @@
       @include ma.adaptiv-value("width", 513, 260, 0);
     }
 
-    @media (max-width: 1150px) {
-      padding: 20px;
-    }
+
 
     @media (max-width: 768px) {
       gap: 20px;

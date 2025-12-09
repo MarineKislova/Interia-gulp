@@ -1,9 +1,15 @@
 @use "../utils/mixins" as ms3;
 
 .section-three {
-  @include ms3.adaptiv-value("padding-top", 100, 35, 0);
-  // padding-top: 100px;
+  @include ms3.adaptiv-value("padding-top", 100, 15, 0);
   &__container {
+    @media (max-width: 1150px) {
+      padding: 20px;
+      font-weight: bolder;
+    }
+  }
+
+  &__body {
     background: url(../img/section-three-BG.png) no-repeat left/cover;
     display: flex;
     flex-direction: column;
@@ -15,14 +21,13 @@
     @include ms3.adaptiv-value("padding-bottom", 69, 19, 0);
     @include ms3.adaptiv-value("padding-left", 512, 100, 0);
     @include ms3.adaptiv-value("padding-right", 105, 35, 0);
-
-    @media (max-width: 1150px) {
-      padding: 20px;
-      font-weight: bolder;
-    }
   }
 
   .btn {
     padding: 8px 28px;
+    
+    @media (max-width: 1150px) {
+      width: max-content;
+    }
   }
 }

@@ -1,0 +1,19 @@
+@use "../utils/mixins" as ms5;
+
+.section-five {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    @include ms5.adaptiv-value("padding-top", 100, 15, 0);
+
+    @media (max-width: 1150px) {
+      padding: 20px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    @include ms5.adaptiv-value("height", 98, 58, 0);
+  }
+}

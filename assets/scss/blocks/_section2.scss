@@ -4,7 +4,7 @@
   &__container {
     display: flex;
     @include ms2.adaptiv-value("gap", 22, 12, 0);
-    @include ms2.adaptiv-value("padding-top", 75, 35, 0);
+    @include ms2.adaptiv-value("padding-top", 75, 15, 0);
 
     @media (max-width: 1150px) {
       padding: 20px;
