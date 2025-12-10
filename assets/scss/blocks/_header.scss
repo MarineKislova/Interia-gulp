@@ -5,10 +5,6 @@
     @include mh.adaptiv-value("padding-top", 40, 5, 0);
     position: relative;
     z-index: 2;
-
-    @media (max-width: 1150px) {
-      padding: 15px;
-    }
   }
 
   &__row {
@@ -69,9 +65,9 @@
     font-weight: 400;
     font-size: 16px;
     @include mh.adaptiv-value("line-height", 24, 12, 0);
-    
+
     text-align: center;
-     @include mh.adaptiv-value("letter-spacing", 6.88, 2.88, 0);
+    @include mh.adaptiv-value("letter-spacing", 6.88, 2.88, 0);
     letter-spacing: 0.43em;
     padding: 5px 25px;
   }
@@ -87,9 +83,8 @@
   }
 
   &__btn {
-    max-width: 50px;
-    border: none;
-    border-radius: initial;
+    border: none !important;
+    font-size: mh.fluid(22) !important;
   }
 
   @media (min-width: 924px) {
@@ -153,7 +148,3 @@
     opacity: 1;
   }
 }
-
-
-
-

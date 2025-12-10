@@ -4,6 +4,7 @@ import gulp from "gulp";
 import { path } from "./gulp/config/path.js";
 // импорт общих плагинов
 import { plugins } from "./gulp/config/plugins.js";
+import gitPage from "gh-pages";
 
 // передаем значения в глобальную переменную
 global.app = {

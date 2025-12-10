@@ -58,3 +58,19 @@
     #{$property}: calc(#{$minSize}px + #{$addSize} * ((100vw - 320px) / (#{set.$maxWidth} - 320)));
   }
 }
+
+
+@function fluid($max, $min: null, $min-width: 320, $max-width: 1920) {
+  @if $min == null {
+    $min: $max * 0.75;
+  }
+
+  $delta: $max - $min;
+  $vw-delta: $max-width - $min-width;
+
+  @return clamp(
+    #{$min}px,
+    calc(#{$min}px + #{$delta} * ((100vw - #{$min-width}px) / #{$vw-delta})),
+    #{$max}px
+  );
+}

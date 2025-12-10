@@ -13,6 +13,8 @@
 @use "blocks/_section4.scss";
 @use "blocks/_section5.scss";
 @use "blocks/_section6.scss";
+@use "blocks/_section8.scss";
+@use "blocks/_section9.scss";
 @use "blocks/_footer.scss";
 
 .wrapper {
@@ -29,7 +31,10 @@
 [class*="__container"] {
   max-width: 1140px;
   margin: 0 auto;
-  // background-color: rgb(25, 29, 29);
+  
+  @media (max-width: 1150px) {
+    padding: 20px;
+  }
   
 }
 

@@ -3,12 +3,9 @@
 .section-five {
   &__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     @include ms5.adaptiv-value("padding-top", 100, 15, 0);
-
-    @media (max-width: 1150px) {
-      padding: 20px;
-    }
+    column-gap: 40px;
   }
 
   &__logo {
