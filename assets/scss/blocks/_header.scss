@@ -162,7 +162,7 @@
 .swiper-slide {
   position: relative;
   // width: 1940px;
-  @include mh.adaptiv-value("height", 689, 289, 0);
+  @include mh.adaptiv-value("height", 489, 289, 0);
   // height: 689px;
 
   img {
@@ -196,12 +196,12 @@
 .swiper-pagination-bullet {
   @include mh.adaptiv-value("width", 40, 5, 0);
   @include mh.adaptiv-value("height", 10, 5, 0);
-  background-color: #262323;
+  background-color: #000;
+  opacity: 0.8;
   border-radius: 10px;
 }
 
-// .my-carousel.swiper {
-//   padding-left: 0 !important;
-//   padding-right: 0 !important;
-//   width: calc(100% - 0px);
-// }
+.swiper-pagination-bullet-active {
+  background-color: #000;
+  opacity: 1;
+}
