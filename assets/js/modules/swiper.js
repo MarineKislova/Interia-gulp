@@ -1,12 +1,13 @@
-import Swiper from "swiper";
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/autoplay";
-
 // Header slider
-export const swiperHeader = new Swiper(".header__slider", {
+export const swiperHeader = new Swiper('[data-swiper="headerSwiper"]', {
+  // Optional parameters
   loop: true,
-  simulateTouch: false,
+  slidesPerView: 1,
+  speed: 1000,
+  simulateTouch: true,
+  centeredSlides: false,
+  spaceBetween: 20,
+  roundLengths: true,
 
   // If we need pagination
   pagination: {
@@ -17,11 +18,12 @@ export const swiperHeader = new Swiper(".header__slider", {
   },
 
   // Autoplay
-  autoplay: {
-    delay: 5700,
-    disableOnInteraction: false,
-    stopOnLastSlide: false,
-  },
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  //   stopOnLastSlide: false,
+  // },
 
-  speed: 1700,
+  // speed: 2500,
 });
+

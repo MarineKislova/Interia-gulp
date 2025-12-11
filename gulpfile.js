@@ -37,6 +37,8 @@ import { svgSpriteTask } from "./gulp/tasks/svgSprive.js";
 import { zip } from "./gulp/tasks/zip.js";
 // импорт ftp из ftp.js
 import { ftp } from "./gulp/tasks/ftp.js";
+//импорт copySwiperCss и copySwiperJs из swiper.js
+import { copySwiperCss, copySwiperJs } from "./gulp/tasks/swiper.js";
 
 const images = app.gulp.series(processImages, copySvg);
 
@@ -46,7 +48,9 @@ function watchAssets() {
   gulp.watch(path.watch.html, html);
   // gulp.watch(path.watch.html, gulp.series(html, ftp)); // если хотим чтобы побубликовалось сразу после публикации в ftp и так нужно сделать с каждм watch
   gulp.watch(path.watch.scss, scss);
+  gulp.watch(path.watch.scss, copySwiperCss);
   gulp.watch(path.watch.js, js);
+  gulp.watch(path.watch.js, copySwiperJs);
   gulp.watch(path.watch.images, images);
 }
 
@@ -56,7 +60,7 @@ export { svgSpriteTask };
 const fontsTasks = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 // основные задачи для сборки проекта с использованием fonts.js
-const mainTasks = gulp.series(fontsTasks, gulp.parallel(copy, html, scss, js, images));
+const mainTasks = gulp.series(fontsTasks, gulp.parallel(copy, html, scss, copySwiperCss, js, copySwiperJs, images));
 
 // // основные задачи для сборки проекта
 // const mainTasks = gulp.parallel(copy, html, scss, js, images); // параллельное выполнение html и copy

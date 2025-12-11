@@ -5,6 +5,8 @@
 @use "utils/_settings.scss" as setSt;
 @use "utils/_variable.scss" as varSt;
 
+
+
 // блоки
 @use "blocks/_header.scss";
 @use "blocks/_about.scss";
@@ -16,6 +18,8 @@
 @use "blocks/_section8.scss";
 @use "blocks/_section9.scss";
 @use "blocks/_footer.scss";
+
+
 
 .wrapper {
   min-height: 100%;
