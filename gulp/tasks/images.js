@@ -4,6 +4,7 @@ import webp from "gulp-webp";
 // установка плагина для сжатия изображений
 // npm install -D gulp-imagemin
 import imagemin from "gulp-imagemin";
+// установки плагина для изменения размера изображений с помощью Sharp
 
 export const processImages = () => {
   return (
@@ -46,10 +47,5 @@ export const processImages = () => {
 };
 
 export const copySvg = () => {
-  return app.gulp
-    .src(app.path.src.svg)
-    .pipe(app.gulp.dest(app.path.build.images))
-    .pipe(app.plugins.browserSync.stream()); // Stream только после последней операции
+  return app.gulp.src(app.path.src.svg).pipe(app.gulp.dest(app.path.build.images)).pipe(app.plugins.browserSync.stream()); // Stream только после последней операции
 };
-
- 
