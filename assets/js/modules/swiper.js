@@ -1,5 +1,8 @@
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
 // Header slider
 export const swiperHeader = new Swiper('[data-swiper="headerSwiper"]', {
+  modules: [Navigation, Pagination, Autoplay],
   // Optional parameters
   loop: true,
   slidesPerView: 1,
@@ -29,6 +32,7 @@ export const swiperHeader = new Swiper('[data-swiper="headerSwiper"]', {
 
 // Header slider
 export const swiperSectionEight = new Swiper('[data-swiper="sectionEightSwiper"]', {
+  modules: [Navigation, Pagination],
  loop: true,
     simulateTouch: true,
     slidesPerView: 4,
