@@ -85,6 +85,7 @@
   &__btn {
     border: none !important;
     font-size: mh.fluid(22) !important;
+    background-color: initial;
   }
 
   @media (min-width: 924px) {
@@ -103,7 +104,7 @@
     display: flex;
 
     &__btn {
-      z-index: 10;
+      z-index: 20;
     }
 
     &__links {
@@ -120,10 +121,10 @@
       text-transform: uppercase;
       font-family: "Kanit";
       font-size: 22px;
-      color: #efa8a8;
+      color: #cbc2c2;
       font-weight: bold;
       backdrop-filter: blur(16px) saturate(280%);
-      background-color: rgba(65, 58, 58, 0.91);
+      background-color: rgba(63, 63, 63, 0.8);
       animation: burgerAnimation 0.5s;
       row-gap: 30px;
       border-top-left-radius: 10px;
@@ -157,7 +158,6 @@
 }
 .swiper-wrapper {
   display: flex;
-
 }
 .swiper-slide {
   position: relative;
@@ -182,10 +182,10 @@
   padding: 8px 12px;
   position: absolute;
   top: 40%;
-  left: 35%;
+  left: 30%;
 
   @media (max-width: 1024px) {
-    left: 30%;
+    left: 25%;
   }
 
   @media (max-width: 768px) {
@@ -193,15 +193,15 @@
   }
 
   @media (max-width: 425px) {
-    left: 20%;
+    left: 17%;
   }
 
-   @media (max-width: 375px) {
+  @media (max-width: 375px) {
     left: 15%;
   }
 
   @media (max-width: 320px) {
-    left: 10%;
+    left: 12%;
   }
 }
 .swiper-pagination {
@@ -211,17 +211,21 @@
   height: 10px;
   border-radius: 10px;
   z-index: 999;
+
+
 }
 
 .swiper-pagination-bullet {
-  @include mh.adaptiv-value("width", 40, 5, 0);
-  @include mh.adaptiv-value("height", 10, 5, 0);
+  @include mh.adaptiv-value("width", 40, 20, 0);
+  @include mh.adaptiv-value("height", 10, 7, 0);
   background-color: #000;
   opacity: 0.8;
-  border-radius: 10px;
+  gap: 20px;
+  border-radius: 20px;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #000;
   opacity: 1;
+  
 }

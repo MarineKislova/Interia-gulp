@@ -5,16 +5,27 @@
   .swiper-wrapper {
     height: 200px;
   }
+
   .swiper-button-prev {
     top: 70%;
     color: #5e5c5c;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
+
   .swiper-button-next {
     top: 70%;
     color: #5e5c5c;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
+
   .swiper-slide {
     height: 200px;
     img{
