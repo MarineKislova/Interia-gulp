@@ -45,7 +45,7 @@ export const html = () => {
             // Возвращаем новую структуру: <picture> с source webp и оригинальным <img>
             return `
                 <picture>
-                  <source srcset="${webpSrcset}" type="image/webp">
+                  <source srcset="${webpSrcset}" type="image/webp" sizes="100vw">
                   ${match}
                 </picture>
               `;
