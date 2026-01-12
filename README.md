@@ -61,6 +61,7 @@ Speed Index: 0.5 s
 - Zero main-thread blocking during page load (Total Blocking Time = 0 ms)
 - Predictable rendering flow with controlled asset loading
 - Consistent visual output across breakpoints and device types
+- Build pipeline configured to avoid render-blocking resources
 
 ---
 
