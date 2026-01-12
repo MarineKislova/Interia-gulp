@@ -11,6 +11,16 @@ A modern single-page website focused on loading speed and user experience.
 - **HTML5** (semantic and valid markup)
 - **CCS3/SCSS** (Flexbox, Grid)
 - **JavaScript** (ES6+)
+- **Gulp** (build automation & optimization)
+
+---
+
+## 🔧 Build & Tooling
+- Gulp — build automation and asset optimization
+- CSS and JavaScript minification
+- Autoprefixer for cross-browser compatibility
+- Image optimization
+- Development server with live reload
 
 ---
 
